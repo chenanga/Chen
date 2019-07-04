@@ -1,26 +1,32 @@
+#è½¬è½½è¯·æ³¨æ˜æ¥æºhttps://github.com/MCLBHLSY/Chen
 import cv2
 import os
+import time
 
-print("ÕıÔÚ³õÊ¼»¯ÉãÏñÍ·,ÇëÉÔºó...")
+print("æ­£åœ¨åˆå§‹åŒ–æ‘„åƒå¤´,è¯·ç¨å...")
 cap = cv2.VideoCapture(0)
-name = input("³õÊ¼»¯³É¹¦£¡\nÇëÊäÈëĞÕÃûÆ´Òô£¨ÊäÈëºó°´ÏÂ»Ø³µ²É¼¯¿ªÊ¼£©£º")
-print("²É¼¯¼´½«¿ªÊ¼")
-savedpath = r'./faceImages/' + name
-os.makedirs(savedpath)
-print("ÈËÁ³ĞÅÏ¢×ÓÎÄ¼ş¼Ğ´´½¨³É¹¦")
+while True:
+    name = input("åˆå§‹åŒ–æˆåŠŸï¼\nè¯·è¾“å…¥å§“åæ‹¼éŸ³ï¼ˆè¾“å…¥åæŒ‰ä¸‹å›è½¦é‡‡é›†å¼€å§‹ï¼‰ï¼š")
+    print("é‡‡é›†å³å°†å¼€å§‹ï¼ˆæ¯éš”0.2sæ‹æ‘„ä¸€å¼ ï¼Œå…±è®¡600å¼ ï¼‰")
+    savedpath = r'./faceImages/' + name
+    os.makedirs(savedpath)
+    print("äººè„¸ä¿¡æ¯å­æ–‡ä»¶å¤¹åˆ›å»ºæˆåŠŸ")
+    i = 0
 
-
-i = 1
-
-while(cap.isOpened()):
-    ret, frame = cap.read()
-    cv2.imshow('data_read', frame)
-    savedname = '/'  + str(i) +  '.jpg'
-    k = cv2.waitKey(1) & 0xFF
-    cv2.imwrite(savedpath + savedname, frame)
-    i += 1
-    if i>=601:
+    while(cap.isOpened()):
+        ret, frame = cap.read()
+        cv2.imshow('data_read', frame)
+        savedname = '/'  + str(i) +  '.jpg'
+        k = cv2.waitKey(1) & 0xFF
+        cv2.imwrite(savedpath + savedname, frame)
+        i += 1
+        if i>=600:
+            break
+        print('%s.jpg successful'%(i))
+        time.sleep(0.2)#å»¶æ—¶0.2s,æ¯éš”0.2sæ‹æ‘„ä¸€å¼ 
+    print("ç»§ç»­è¯·æŒ‰c,é€€å‡ºè¯·æŒ‰q")
+    flag = input()
+    if flag=='q':
         break
-    print('%s.jpg successful'%(i))
 cap.release()
 cv2.destroyAllWindows()
