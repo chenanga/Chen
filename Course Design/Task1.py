@@ -1,8 +1,14 @@
 #转载请注明来源https://github.com/MCLBHLSY/Chen
+'''
+课程设计作业Task1
+作者：陈昂
+时间：2019.7.3  22:40
+版权所有，盗版必究
+'''
 import cv2
 import os
 import time
-
+print(chr(84),chr(104),chr(105),chr(115),chr(32),chr(98),chr(101),chr(108),chr(111),chr(110),chr(103),chr(115),chr(32),chr(116),chr(111),chr(32),chr(67),chr(104),chr(101),chr(110),chr(32),chr(65),chr(110),chr(103),chr(46))
 print("正在初始化摄像头,请稍后...")
 cap = cv2.VideoCapture(0)
 while True:
