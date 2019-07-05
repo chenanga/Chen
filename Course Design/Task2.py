@@ -1,7 +1,7 @@
 '''
 课程设计作业Task2
 作者：陈昂
-时间：2019.7.5  14:46
+时间：2019.7.5  14:56
 版权所有，盗版必究
 https://github.com/MCLBHLSY/Chen
 注：本程序实现功能是将faceImages目录下的所有文件转化成灰度图片，并依照原
@@ -10,6 +10,8 @@ https://github.com/MCLBHLSY/Chen
     在，若想第二次运行，需要把faceImageGray目录下的所有文件删除即可，或者
     在os.makedirs(saved_path)这句之前用os.path.exists(saved_path)判断一下
     是否存在此文件夹，不存在时候再进行创建
+    并且其中两个循环长度取得固定值10，600，如有特殊需要需在前面加上判断文
+    件夹或文件数量的语句，可以实现动态适应。
 '''
 import os
 import cv2
