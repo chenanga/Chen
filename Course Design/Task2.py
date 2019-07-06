@@ -1,7 +1,7 @@
 '''
 课程设计作业Task2
 作者：陈昂
-时间：2019.7.7  0:18
+时间：2019.7.7  0:21
 版权所有，盗版必究
 https://github.com/MCLBHLSY/Chen
 注：   ①本程序实现功能是将faceImages目录下的所有文件先进行面部检测（mxnet_mtcnn）再转化成
@@ -10,7 +10,7 @@ https://github.com/MCLBHLSY/Chen
     需要把faceImageGray目录下的所有文件删除即可，或者在os.makedirs(saved_path)这句之前用
     os.path.exists(saved_path)判断一下是否存在此文件夹，不存在时候再进行创建。
     （mxnet_mtcnn模型引用自https://github.com/YYuanAnyVision/mxnet_mtcnn_face_detection.git，
-    需要把该文件下载下来后放到和TASK.py同路径下）
+    需要把该文件下载下来后放到和TASK.py同路径下，然后把文件夹名称修改为mxnet_mtcnn_face_detection，并且把其文件夹下的mtcnn_detector.py第九行的# from itertools import izip替换成izip = zip）
        ②并且其中两个循环长度取得固定值10，600，如有特殊需要需在前面加上判断文件夹或文件数量
        的语句，可以实现动态适应。
        ③程序最后实现了进度条功能，因为程序执行时间较长，此处设置了进度条，方便用户观看。
