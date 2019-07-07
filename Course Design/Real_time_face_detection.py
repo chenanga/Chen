@@ -1,7 +1,7 @@
 '''
-课程设计作业  小实验
+课程设计作业  小实验:实时面部检测
 作者：陈昂
-时间：2019.7.7  12:07
+时间：2019.7.7  12:09
 版权所有，盗版必究
 https://github.com/MCLBHLSY/Chen
 （mxnet_mtcnn模型引用自https://github.com/YYuanAnyVision/mxnet_mtcnn_face_detection.git，需要把该文件下载下来后放到和TASK.py同路径下，
