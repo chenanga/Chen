@@ -528,7 +528,9 @@ class picture(QWidget):
             QtGui.QPixmap(os.getcwd() + '\\data\\source_image\\backgroud.jpg')))
         self.setPalette(window_pale)
 
-
+        camera_or_video_save_path = 'data\\test'
+        if not os.path.exists(camera_or_video_save_path):
+            os.makedirs(camera_or_video_save_path)
         self.label1 = QLabel(self)
         self.label1.setText("   待检测图片")
         self.label1.setFixedSize(700, 500)
